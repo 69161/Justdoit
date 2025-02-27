@@ -45,3 +45,23 @@ git reset --hard HEAD^
 git reset --hard "commit id 一般前4-5位"
 ```
 
+#### 工作区与暂存区
+
+工作区当前目录，工作区内一隐藏目录`.git`是Git的版本库；
+
+版本库里存的很多东西，最重要的是暂存区（stage），还有Git为我们自动创建的第一个分支`master`，以及指向`master`的一个指针叫`HEAD`。
+
+![git-repo](https://liaoxuefeng.com/books/git/time-travel/working-stage/repo.png)
+
+```
+git add //将工作区文件提交到暂存区
+git commit //暂存区的所有内容提交到当前分支
+//提交后又没对工作区做任何修改，那工作区就是干净的
+$ git status
+On branch master
+nothing to commit, working tree clean
+//暂存区就没有任何内容了
+```
+
+![git-stage-after-commit](https://liaoxuefeng.com/books/git/time-travel/working-stage/commit.png)
+
