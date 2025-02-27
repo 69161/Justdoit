@@ -284,4 +284,36 @@ git branch -d feature
    //rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
    ```
 
+#### 标签管理
+
+1. 创建标签
+
+   ```
+   git switch dev
+   git tag v1.0
+   // 默认标签打在最新的commit上，忘记打可以找到历史提交的commit id，然后打标签
+   git tag v0.9 <commit id>
+   
+   git tag //查看标签
+   git show v0.9 //查看标签信息
+   
+   创建带有说明的标签 -a 指定标签名，-m 指定说明文字
+   ```
+
+2. 操作标签
+
+   ```
+   //删除标签
+   git tag -d v0.1
+   
+   //创建的标签只存储在本地，不会自动推送
+   git push origin <tagname>
+   
+   git push origin --tags //一次性推送全部未推送到远程的tag
+   
+   //若标签已推送到远程，需要删除
+   git tag -d v0.9
+   git push origin :refs/tags/v0.9
+   ```
+
    
