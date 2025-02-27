@@ -141,11 +141,11 @@ git push origin main // 之后每次推送
 
    之后每次提交`dev`向前一步，`main`指针不变（如下图，把`master`改为`main`理解）
 
-   ![image-20250227132248286](C:\Users\dabai\AppData\Roaming\Typora\typora-user-images\image-20250227132248286.png)
+   [![3dRCKQ9.md.png](https://iili.io/3dRCKQ9.md.png)](https://freeimage.host/i/3dRCKQ9)
 
 ​	`dev`工作完成，合并到`main`上，直接把`main`指向`dev`的当前提交，就完成了合并
 
-​	![image-20250227132501732](C:\Users\dabai\AppData\Roaming\Typora\typora-user-images\image-20250227132501732.png)
+​	![3dRxSuR.png](https://iili.io/3dRxSuR.png)
 
 ​	然后删除`dev`分支
 
@@ -186,7 +186,7 @@ git commit
 git branch -d feature
 ```
 
-![image-20250227140354928](C:\Users\dabai\AppData\Roaming\Typora\typora-user-images\image-20250227140354928.png)
+![3dRxvyv.png](https://iili.io/3dRxvyv.png)
 
 3. 通常合并分支用`Fast forward`模式，但删除分支后会丢掉分支信息
 
@@ -250,5 +250,7 @@ git branch -d feature
    开发新功能
 
    情况变动，新功能删除 `git branch -D feature`
+
+   
 
    
