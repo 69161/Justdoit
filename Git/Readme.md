@@ -123,4 +123,42 @@ git push origin main // 之后每次推送
    git remote rm origin //"删除"本质是解除了本地与远程的绑定关系
    ```
 
-   
+6. 远程库克隆
+
+   ```
+   git clone git@github.com:69161/Justdoit.git
+   ```
+
+#### 分支管理
+
+1. 创建与合并分支
+
+   如今只有一条分支`main`；在版本回退中，`HEAD`指向`main`；
+
+   每次提交，`main`分支向前移动一步
+
+   创建新的分支 `dev` 指向与`main`相同的提交，再把`HEAD`指向`dev`表示当前分支在`dev`上
+
+   之后每次提交`dev`向前一步，`main`指针不变（如下图，把`master`改为`main`理解）
+
+   ![image-20250227132248286](C:\Users\dabai\AppData\Roaming\Typora\typora-user-images\image-20250227132248286.png)
+
+​	`dev`工作完成，合并到`main`上，直接把`main`指向`dev`的当前提交，就完成了合并
+
+​	![image-20250227132501732](C:\Users\dabai\AppData\Roaming\Typora\typora-user-images\image-20250227132501732.png)
+
+​	然后删除`dev`分支
+
+```
+git switch -c <新分支> //创建并切换分支
+git switch <分支> //切换分支
+git checkout <分支> //切换分支
+
+git branch //查看本地分支，带*为当前分支
+git branch -a //查看所有分支（含远程）
+git branch <分支名> //创建分支
+git branch -d <分支名> //删除分支
+git branch -D <分支名> //强制删除分支
+git branch -m <新分支名> //重命名分支
+```
+
