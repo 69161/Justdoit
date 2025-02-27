@@ -197,7 +197,12 @@ git branch -d feature
    git add
    git commit
    git switch main
-   git merge --no-ff -m "merge with no-ff" dev
+   git merge --no-ff -m "merge with no-ff" dev // 生成新的commit -m 描述
    ```
 
+   ```
+   git log --graph --pretty=oneline --abbrev-commit // 查看分支历史
+   git log --oneline --graph
+   ```
+   
    
