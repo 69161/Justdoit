@@ -275,3 +275,13 @@ git branch -d feature
    4. 没有冲突或者解决掉冲突后，再用`git push origin <branch-name>`推送就能成功！
 
    如果`git pull`提示`no tracking information`，则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream-to <branch-name> origin/<branch-name>`
+
+7. Rebase
+
+   ```
+   git rebase
+   //rebase操作可以把本地未push的分叉提交历史整理成直线；
+   //rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
+   ```
+
+   
