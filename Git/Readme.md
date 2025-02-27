@@ -91,3 +91,27 @@ git restore --staged <file>
 git rm
 ```
 
+#### 远程仓库
+
+以GitHub为例
+
+1. 创建SSH Key，先看主目录下（/c/Users/xxx)下是否有`.ssh`文件夹，看下文件内是否有`id_rsa`和`id_rsa.pub`若没有可创建
+
+```
+ssh-keygen -t rsa -C "youreEmail@example.com"
+```
+
+​	然后一路回车，创建成功后`.ssh`文件夹下有`id_rsa`(私钥）和`id_rsa.pub`（公钥）
+
+2. 登录Github，`Settings=>SSH and GPG keys=>new SSH Key` 填写上你的`id_rsa.pub`内容，然后保存
+3. 添加远程库（repository）
+4. 本地工作台与远程库建立关联	
+
+```
+git remote add origin https://github.com/69161/Justdoit.git
+// remote 远程 添加 origin 原来的 起源
+git branch -M main
+// -m 重命名分支
+git push -u origin main
+```
+
