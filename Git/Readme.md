@@ -245,4 +245,10 @@ git branch -d feature
    git cherry-pick <bug提交的commit>
    ```
 
+5. feature 分支
+
+   开发新功能
+
+   情况变动，新功能删除 `git branch -D feature`
+
    
