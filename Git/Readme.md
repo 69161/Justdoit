@@ -162,3 +162,12 @@ git branch -D <分支名> //强制删除分支
 git branch -m <新分支名> //重命名分支
 ```
 
+合并分支
+
+```
+//在 dev 分支上git add git commit 后
+git switch main //切换回main分支
+git merge dev //将dev分支合并到当前分支
+git branch -d dev //删除dev分支
+```
+
