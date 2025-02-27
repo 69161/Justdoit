@@ -173,20 +173,18 @@ git branch -d dev //删除dev分支
 
 2. 解决合并分支冲突
 
-<<<<<<< HEAD
 ```
 git switch -c feature
 git add 
-git commin
+git commit
 git switch main
 git add
-git commin
+git commit
+git merge feature //提示冲突 <<< === >>> 根据需求更改后再add commit
+git add 
+git commit
+git branch -d feature
 ```
 
-=======
-   ```
-   git switch -c feature
-   ```
+![image-20250227140354928](C:\Users\dabai\AppData\Roaming\Typora\typora-user-images\image-20250227140354928.png)
 
-   
->>>>>>> feature
