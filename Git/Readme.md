@@ -1,4 +1,4 @@
-#### Git is a version control system
+#### Git is a distributed version control system
 
 #### Git is free software
 
@@ -32,4 +32,6 @@ git commit -m "wrote a readme file about Git knowledge"
 git status //时刻掌握仓库当前状态
 git diff //查看不同
 ```
+
+#### 版本回退
 
