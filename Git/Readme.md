@@ -173,6 +173,7 @@ git branch -d dev //删除dev分支
 
 2. 解决合并分支冲突
 
+<<<<<<< HEAD
 ```
 git switch -c feature
 git add 
@@ -182,3 +183,10 @@ git add
 git commin
 ```
 
+=======
+   ```
+   git switch -c feature
+   ```
+
+   
+>>>>>>> feature
