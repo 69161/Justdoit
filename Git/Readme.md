@@ -205,4 +205,44 @@ git branch -d feature
    git log --oneline --graph
    ```
    
+   ###### 分支策略
+   
+   `main`分支是非常稳定的，仅用来发布新版本；比如1.0版本发布，再把`dev`合并到`main`上发布
+   
+   `dev`是小伙伴干活的地方，每个人都有自己的分支，时不时的合并到`dev`上
+   
+   ![git-br-policy](https://liaoxuefeng.com/books/git/branch/policy/branches.png)
+
+4. bug分支
+
+   ```
+   git status // 查看工作台的状态，当前工作未完成无法提交
+   git stash // 把当前工作台储存起来
+   
+   // 在main分支上处理bug
+   git switch main
+   git switch -c issue-100
+   git add
+   git commit 
+   git switch main
+   git merge --no-ff -m "merge bug fix 100"
+   git branch -d issue-100
+   
+   git switch dev //切回dev分支工作
+   
+   git stash list //看到之前储存的工作现场
+   git stash apply //恢复 但是 stash 内容不删除，需要 git stash drop 删除
+   git stash pop //恢复的同时把stash也删除
+   git stash apply stash@{0} // 恢复指定的stash
+   ```
+
+   `main`分支上修复了bug，`dev`早期从`master`分支出来的，bug也存在于`dev`上
+
+   简单的修复，只需要把bug提交所做的修改“复制”到`dev`分支
+
+   ```
+   git branch //确定已切换到dev分支上
+   git cherry-pick <bug提交的commit>
+   ```
+
    
