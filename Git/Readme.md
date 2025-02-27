@@ -171,3 +171,14 @@ git merge dev //将dev分支合并到当前分支
 git branch -d dev //删除dev分支
 ```
 
+2. 解决合并分支冲突
+
+```
+git switch -c feature
+git add 
+git commin
+git switch main
+git add
+git commin
+```
+
