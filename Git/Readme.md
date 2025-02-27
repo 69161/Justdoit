@@ -24,5 +24,12 @@ git init //把这个目录变成Git可以管理的仓库
 
 code . //windows下使用vscode打开当前文件夹
 
+git add Readme.md
+
+git commit -m "wrote a readme file about Git knowledge"  
+//git commit -m 后面输入本次提交的说明
+
+git status //时刻掌握仓库当前状态
+git diff //查看不同
 ```
 
