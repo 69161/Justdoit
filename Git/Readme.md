@@ -41,5 +41,7 @@ git log //历史记录  --pretty=oneline
 // HEAD 表示当前版本，HEAD^ 上一个版本 HEAD^^ 上上一个版本 HEAD~100 上100个版本
 git reset --hard HEAD^ 
 //--hard会回退到上个版本的已提交状态，而--soft会回退到上个版本的未提交状态，--mixed会回退到上个版本已添加但未提交的状态
+
+git reset --hard "commit id 一般前4-5位"
 ```
 
