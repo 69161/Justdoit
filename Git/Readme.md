@@ -33,7 +33,7 @@ git status //时刻掌握仓库当前状态
 git diff //查看不同
 ```
 
-#### 版本回退
+##### 版本回退
 
 ```
 git log //历史记录  --pretty=oneline 
@@ -45,7 +45,7 @@ git reset --hard HEAD^
 git reset --hard "commit id 一般前4-5位"
 ```
 
-#### 工作区与暂存区
+##### 工作区与暂存区
 
 工作区当前目录，工作区内一隐藏目录`.git`是Git的版本库；
 
@@ -64,4 +64,24 @@ nothing to commit, working tree clean
 ```
 
 ![git-stage-after-commit](https://liaoxuefeng.com/books/git/time-travel/working-stage/commit.png)
+
+##### 管理修改
+
+简单的说，Git追踪的是管理修改并非文件，工作区修改后内容`add`后存入暂存区（stage）`commit`后提交到分支
+
+##### 撤销修改
+
+```
+git restore file  //把file在工作区的修改全部撤销
+// 一种是file 自修改后还没有被放到暂存区，撤销修改就回到和版本库一模一样的状态
+// 一种是file 已经添加到暂存区后，又作了修改，撤销修改就回到添加到暂存区后的状态
+// 让file 回到最近一次git commit或git add时的状态
+git restore . //丢弃所有未暂存的修改 慎用！
+```
+
+```
+git restore --staged <file> 
+// 将文件从暂存区移出，但保留工作目录中的更改
+// 若不加--staged 会直接丢弃工作目录中未暂存的修改，将其恢复到最近一次提交的状态
+```
 
