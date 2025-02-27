@@ -112,6 +112,15 @@ git remote add origin https://github.com/69161/Justdoit.git
 // remote 远程 添加 origin 原来的 起源
 git branch -M main
 // -m 重命名分支
-git push -u origin main
+git push -u origin main // 第一次推送  -u
+git push origin main // 之后每次推送
 ```
 
+5. 删除远程库
+
+   ```
+   git remote -v //查看远程库信息
+   git remote rm origin //"删除"本质是解除了本地与远程的绑定关系
+   ```
+
+   
