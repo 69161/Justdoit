@@ -251,6 +251,27 @@ git branch -d feature
 
    情况变动，新功能删除 `git branch -D feature`
 
-   
+6. 多人协作
 
+   ```
+   //推送分支  main 主分支  dev 开发分支 bug 本地修复 featuer 是否推送 取决是否合作
+   git push origin <分支名>
    
+   git clone <仓库地址> //clone 下来的只有main分支
+   git switch -c dev origin/dev //需要在dev分支上开发，需创建远程origin分支dev到本地
+   
+   git add 
+   git commit 
+   git push origin dev
+   
+   //推送失败，小伙伴的最新提交和你试图推送的提交有冲突
+   git pull 
+   git branch --set-upstream-to=origin/dev dev
+   ```
+
+   1. 首先，可以尝试用`git push origin <branch-name>`推送自己的修改；
+   2. 如果推送失败，则因为远程分支比你的本地更新，需要先用`git pull`试图合并；
+   3. 如果合并有冲突，则解决冲突，并在本地提交；
+   4. 没有冲突或者解决掉冲突后，再用`git push origin <branch-name>`推送就能成功！
+
+   如果`git pull`提示`no tracking information`，则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream-to <branch-name> origin/<branch-name>`
