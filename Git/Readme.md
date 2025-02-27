@@ -188,3 +188,16 @@ git branch -d feature
 
 ![image-20250227140354928](C:\Users\dabai\AppData\Roaming\Typora\typora-user-images\image-20250227140354928.png)
 
+3. 通常合并分支用`Fast forward`模式，但删除分支后会丢掉分支信息
+
+   强制禁用`Fast forward`  `--no-ff` git会再`merge`时生成一个新的`commit`
+
+   ```
+   git switch -c dev
+   git add
+   git commit
+   git switch main
+   git merge --no-ff -m "merge with no-ff" dev
+   ```
+
+   
