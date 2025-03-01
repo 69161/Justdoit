@@ -9,7 +9,9 @@
 ```bash
 git config --global user.name "your name"
 git config --global user.email "email@example.com"
-git config --global core.ignorecase false # 让git识别大小写，避免文件名大小写不跟踪
+git config --global core.ignorecase false 
+# 让git识别大小写，避免文件名大小写不跟踪
+# 若是在用到的时候临时设置，记得暂存区移除 git rm --cached 文件名
 ```
 
 设置参数后，表示这台机器上所有的Git仓库都会使用这个配置
